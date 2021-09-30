@@ -1,0 +1,10 @@
+.heading {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: $primary-color;
+  margin-bottom: 30px;
+  @include maxWidth(1023px) {
+    margin-bottom: 50px;
+  }
+}

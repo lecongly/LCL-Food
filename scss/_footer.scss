@@ -1,0 +1,18 @@
+.footer {
+  background-color: #222;
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 50px 0;
+    gap: 20px;
+  }
+  &-item:hover {
+    opacity: 0.8;
+  }
+  &-link {
+    font-size: 24px;
+    color: #fff;
+  }
+}

@@ -1,0 +1,90 @@
+.header {
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
+  &-logo {
+    font-size: 24px;
+    font-weight: bold;
+    &-icon {
+      color: $primary-color;
+    }
+  }
+}
+.menu {
+  &-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0 50px;
+  }
+  &-link {
+    font-weight: 600;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  &-tool {
+    font-size: 24px;
+    display: none;
+  }
+  @include maxWidth(1023px) {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 99;
+    transform: translateX(100%);
+    transition: 0.25s linear;
+    &-tool {
+      display: block;
+      position: relative;
+      z-index: 100;
+      .close {
+        display: none;
+      }
+      &.active {
+        .open {
+          display: none;
+        }
+        .close {
+          display: block;
+        }
+      }
+    }
+    &.active {
+      transform: translateX(0);
+    }
+    &-list {
+      flex-direction: column;
+      height: 100%;
+      padding: 100px 20px;
+    }
+    &-item {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    &-link {
+      display: block;
+      width: 100%;
+      padding: 15px 20px;
+      color: $gray;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      &:hover {
+        color: white;
+        background-color: $primary-color;
+      }
+    }
+  }
+}
