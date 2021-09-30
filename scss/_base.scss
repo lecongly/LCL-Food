@@ -77,12 +77,12 @@ section[id] {
   position: fixed;
   top: -120%;
   right: 20px;
-  padding: 5px 15px;
+  padding: 10px 10px;
   font-size: 40px;
   background: $primary-color;
   color: #fff;
   border-radius: 5px;
-  transition: 1s linear;
+  transition: 0.5s linear;
   z-index: 1000;
 }
 #scroll-top.active {
